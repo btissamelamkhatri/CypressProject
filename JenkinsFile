@@ -1,9 +1,12 @@
 pipeline {
+
    agent any
-   options {
+
+   options{
       ansiColor('xterm')
    }
-   stages {
+   
+   stages{
       stage('setup') {
          steps {
             bat 'npm i'
