@@ -4,7 +4,7 @@ pipeline {
       stage('setup') {
          steps {
             bat 'npm i'
-            bat 'npx cypress run --browser chrome cypress/e2e/1-getting-started/*.cy.js'
+            bat 'npx cypress run --browser chrome'
             }
          }
       }

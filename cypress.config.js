@@ -7,7 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       on('file:preprocessor', cucumber())
     },
-    specPattern: "cypress/e2e/1-getting-started/*.cy.js",
+    specPattern: "cypress/e2e/*.feature",
   },
 
 });
