@@ -2,14 +2,11 @@ pipeline {
 
    agent any
 
-   options{
-      ansiColor('xterm')
-   }
-   
    stages{
       stage('setup') {
          steps {
             bat 'npm i'
+            bat 'set NO_COLOR=1 ' 
             bat 'npx cypress run'
             }
          }
