@@ -1,12 +1,14 @@
 pipeline {
-   docker {
+   agent {
+        docker {
             image 'cypress/browsers:node-18.14.1-chrome-110.0.5481.96-1-ff-109.0-edge-110.0.1587.41-1'
         }
+    }
    stages {
       stage('setup') {
          steps {
-            sh 'npm i'
-            sh 'npm run cypress'
+            bat 'npm i'
+            bat 'npm run cypress'
             }
          }
       }
