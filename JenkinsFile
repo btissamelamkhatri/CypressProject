@@ -4,7 +4,7 @@ pipeline {
       stage('setup') {
          steps {
             bat 'npm i'
-            bat 'NO_COLOR=1 npx cypress run'
+            bat 'npx NO_COLOR=1 cypress run'
             }
          }
       }
