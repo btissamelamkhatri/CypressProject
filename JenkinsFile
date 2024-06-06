@@ -4,6 +4,7 @@ pipeline {
       stage('setup') {
          steps {
             bat 'npm i'
+            bat 'npm run cypress:ci'
             }
          }
       }
