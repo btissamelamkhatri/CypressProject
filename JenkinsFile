@@ -1,3 +1,4 @@
+println "env.APP_NAME is ${env.APP_NAME}"
 pipeline {
 
    agent any
