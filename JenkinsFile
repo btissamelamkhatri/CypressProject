@@ -1,7 +1,11 @@
-println "env.APP_NAME is ${env.APP_NAME}"
+// Build once a day
+CRON_SETTINGS = '''45 15 * * *'''
 pipeline {
 
    agent any
+   triggers {
+    cron(CRON_SETTINGS)
+  }
    options { ansiColor('xterm') }
    stages{
       stage('setup') {
